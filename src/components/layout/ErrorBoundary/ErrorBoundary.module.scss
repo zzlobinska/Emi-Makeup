@@ -1,0 +1,11 @@
+@import 'src/styles';
+
+.errorBoundary {
+  @include element-flex(column, center, center);
+  gap: $spacing-1;
+}
+
+.refresh {
+  cursor: pointer;
+  padding: $spacing-2;
+}

@@ -1,0 +1,10 @@
+{
+  "header": "Notification",
+  "error": {
+    "unknown": "An unknown error occurred.",
+    "network": "A network error occurred.",
+    "notAllowedFileFormat": "The file format is not allowed."
+  },
+  "success": {},
+  "common": {}
+}

@@ -1,0 +1,44 @@
+@import 'src/styles';
+
+.link {
+  font-weight: $font-regular;
+  font-size: $font-size-m;
+  color: $color-foreground-dim;
+  cursor: pointer;
+
+  transition: color $transition-main;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.color {
+    color: $color-primary;
+  }
+
+  &.light {
+    color: $color-foreground;
+  }
+
+  &.underlined {
+    text-decoration: underline;
+  }
+
+  &.color.underlined {
+    color: $color-primary;
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 1.7rem;
+  margin-right: 1.5rem;
+}

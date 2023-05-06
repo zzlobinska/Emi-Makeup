@@ -1,0 +1,30 @@
+{
+  "brand": "Brand",
+  "navigation": {
+    "logOut": "Log out",
+    "closePanel": "Close panel"
+  },
+  "action": {
+    "add": "Add",
+    "cancel": "Cancel",
+    "choose": "Choose",
+    "select": "Select",
+    "open": "Open",
+    "close": "Close",
+    "delete": "Delete",
+    "edit": "Edit",
+    "save": "Save",
+    "search": "Search",
+    "chooseFile": "Choose file"
+  },
+  "state": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "isLoading": "Loading"
+  },
+  "message": {
+    "noResults": "No results",
+    "oops": "Oops",
+    "unexpectedError": "Sorry, an unexpected error has occurred"
+  }
+}

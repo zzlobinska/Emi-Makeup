@@ -1,0 +1,30 @@
+{
+  "brand": "Emi Makeup",
+  "navigation": {
+    "logOut": "Wyloguj",
+    "closePanel": "Zamknij panel"
+  },
+  "action": {
+    "add": "Dodaj",
+    "cancel": "Anuluj",
+    "choose": "Wybierz",
+    "select": "Wybierz",
+    "open": "Otwórz",
+    "close": "Zamknij",
+    "delete": "Usuń",
+    "edit": "Edytuj",
+    "save": "Zapisz",
+    "search": "Szukaj",
+    "chooseFile": "Wybierz plik"
+  },
+  "state": {
+    "active": "Aktywny",
+    "inactive": "Nieaktywny",
+    "isLoading": "Ładowanie"
+  },
+  "message": {
+    "noResults": "Brak wyników",
+    "oops": "Ups",
+    "unexpectedError": "Przepraszamy, wystąpił nieoczekiwany błąd"
+  }
+}

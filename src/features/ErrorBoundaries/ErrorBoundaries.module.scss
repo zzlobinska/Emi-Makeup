@@ -1,0 +1,15 @@
+@import 'src/styles';
+
+.container {
+  @include element-flex(column, center, center);
+  height: 100vh;
+  gap: $spacing-3;
+  background-color: $color-background-1;
+}
+
+.hugeFont {
+  font-size: 20rem;
+  line-height: 1;
+  font-weight: $font-bold;
+  color: $color-primary;
+}

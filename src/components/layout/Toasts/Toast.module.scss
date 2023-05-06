@@ -1,0 +1,68 @@
+@import 'src/styles';
+
+:global {
+  .rnc__notification-item {
+    border-radius: $radius-m !important;
+    box-shadow: $shadow-main !important;
+    overflow: hidden !important;
+    outline: 0.1rem solid $color-gray-900;
+
+    @include light-theme {
+      outline: 0.1rem solid $color-gray-300;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-5 $spacing-6;
+  max-width: 48rem;
+  width: 100%;
+  cursor: default;
+  color: $color-foreground;
+  background-color: $color-background-3;
+
+  @include dark-theme {
+    box-shadow: none;
+    outline: 0.1rem solid $color-background-3-light;
+  }
+
+  &.common {
+    background-color: $color-background-3;
+  }
+
+  &.success {
+    background-color: $color-success;
+  }
+
+  &.danger {
+    background-color: $color-danger;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: $font-size-m;
+  font-weight: $font-semiBold;
+  color: $color-foreground;
+  cursor: text;
+}
+
+.icon {
+  width: 3rem;
+  cursor: pointer;
+  background: inherit;
+}
+
+.message {
+  padding-top: 1rem;
+  font-size: $font-size-s;
+  color: $color-foreground-dim;
+  cursor: text;
+}

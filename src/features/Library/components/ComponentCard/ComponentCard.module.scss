@@ -1,0 +1,29 @@
+@import 'src/styles';
+
+.container {
+  @include element-flex(column);
+  gap: 1.2rem;
+  width: 100%;
+  padding: 2.4rem;
+  border-radius: $radius-l;
+  background: $color-background-2;
+  box-shadow: $shadow-main;
+
+  @include dark-theme {
+    box-shadow: unset;
+  }
+}
+
+.header {
+  @include element-flex(column);
+  width: 100%;
+  gap: 0.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.childrenWrapper {
+  @include element-flex(row, flex-start, center);
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2.4rem;
+}

@@ -1,0 +1,6 @@
+@import 'src/styles';
+
+.container {
+  @include flex-center;
+  gap: $spacing-1;
+}

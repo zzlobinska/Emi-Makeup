@@ -1,0 +1,84 @@
+@import 'src/styles';
+
+.mainWrapper {
+  position: relative;
+}
+
+.currentLanguageContainer {
+  @include element-flex(column, center, center);
+  gap: 0.2rem;
+  border-radius: $radius-m;
+  min-height: max-content;
+  padding: $spacing-2 $spacing-3;
+  position: relative;
+  background-color: $color-background-1;
+
+  transition: color $transition-main, background-color $transition-main;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-background-1-dark;
+  }
+}
+
+.button {
+  text-transform: uppercase;
+}
+
+.icon {
+  border-radius: 0.2rem;
+}
+
+.name {
+  text-transform: uppercase;
+  font-size: $font-size-xs;
+  font-weight: $font-semiBold;
+}
+
+.languagesSelection {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: $size-top-navigation-height;
+  left: 0;
+  border-radius: $radius-m;
+  overflow: hidden;
+  background-color: $color-background-1;
+  z-index: 3;
+  box-shadow: $shadow-sharp;
+
+  @include dark-theme {
+    box-shadow: none;
+    background-color: $color-background-2;
+    outline: 0.1rem solid $color-gray-800;
+  }
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.selectionWrapper {
+  @include element-flex(column, center, center);
+  padding: $spacing-2;
+
+  transition: color $transition-main, background-color $transition-main;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-background-1-dark;
+
+    @include dark-theme {
+      background-color: $color-background-2-dark;
+    }
+  }
+}

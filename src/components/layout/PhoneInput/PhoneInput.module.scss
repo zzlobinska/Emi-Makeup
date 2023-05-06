@@ -1,0 +1,61 @@
+@import 'src/styles';
+
+.phoneFormatter {
+  padding: $space-padding-button !important;
+  height: $size-button-height;
+  border: 0.1rem solid $color-primary !important;
+  border-radius: $radius-m !important;
+  transition: all $transition-duration-fast !important;
+  overflow: hidden;
+
+  & > * {
+    outline: none;
+  }
+
+  & input {
+    font-size: 1.5rem !important;
+    font-family: $main-font;
+    color: $color-foreground;
+    background-color: $color-background-2;
+    height: calc($size-button-height - $spacing-1);
+
+    &::placeholder {
+      color: $color-foreground-dim;
+      font-size: $font-size-s;
+    }
+  }
+
+  &:focus-within {
+    box-shadow: $shadow-input-active !important;
+  }
+
+  &.error {
+    border: $border-input-error !important;
+  }
+
+  &:focus-within.error {
+    border: $border-input-error !important;
+    box-shadow: $shadow-input-error !important;
+  }
+}
+
+:global {
+  .PhoneInput {
+    color: $color-foreground;
+    background-color: $color-background-2;
+  }
+
+  .PhoneInputInput::placeholder {
+    color: $color-foreground-dim;
+  }
+
+  .PhoneInputCountrySelect {
+    color: $color-foreground;
+    background-color: $color-background-2;
+  }
+
+  .PhoneInputCountrySelect:focus,
+  .PhoneInputCountrySelect:hover {
+    background-color: $color-background-2-light;
+  }
+}

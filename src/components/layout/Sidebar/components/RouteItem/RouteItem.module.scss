@@ -1,0 +1,75 @@
+@import 'src/styles';
+
+.link {
+  @include element-flex(row, flex-start, center);
+  gap: $spacing-3;
+  position: relative;
+  height: 4.4rem;
+  padding: $space-padding-button;
+  border-radius: $radius-m;
+
+  font-weight: $font-medium;
+  font-size: $font-size-s;
+  font-family: $main-font;
+  color: $color-foreground;
+  letter-spacing: $letter-spacing-4;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  transition: background-color $transition-main, color $transition-main, fill $transition-main;
+
+  &.button {
+    background: transparent;
+    width: 100%;
+    cursor: pointer;
+
+    &.isClose {
+      padding: unset;
+      @include flex-center;
+    }
+
+    & svg {
+      filter: $filter-white;
+      @include light-theme {
+        filter: $filter-black;
+      }
+    }
+  }
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    object-fit: contain;
+  }
+
+  &.isClose {
+    padding: unset;
+    @include flex-center;
+  }
+
+  &:hover {
+    background: $color-background-2-light;
+
+    @include light-theme {
+      background: $color-background-2-dark;
+    }
+  }
+
+  &.active {
+    background: $color-primary;
+    cursor: default;
+
+    @include light-theme {
+      color: $color-foreground-inverted;
+    }
+
+    &:hover {
+      background: $color-primary;
+    }
+
+    & .icon {
+      @include light-theme {
+        color: $color-foreground-inverted;
+      }
+    }
+  }
+}

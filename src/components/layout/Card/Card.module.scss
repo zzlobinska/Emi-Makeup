@@ -1,0 +1,27 @@
+@import 'src/styles';
+
+.card {
+  border: 0.1rem solid $color-gray-400;
+  padding: $spacing-6;
+  border-radius: $radius-l;
+  list-style: none;
+
+  @include dark-theme {
+    border: 0.1rem solid $color-gray-800;
+  }
+
+  &__shadow {
+    box-shadow: $shadow-soft;
+    @include dark-theme {
+      box-shadow: unset;
+    }
+  }
+
+  &__white {
+    background-color: $color-background-2;
+  }
+
+  &__grey {
+    background-color: $color-gray-500;
+  }
+}

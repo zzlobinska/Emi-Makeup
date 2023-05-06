@@ -1,0 +1,179 @@
+@import 'src/styles';
+
+.button {
+  @include button;
+  text-align: center;
+  color: $color-foreground;
+  background-color: $color-primary;
+  white-space: nowrap;
+
+  column-gap: $spacing-3;
+  padding: $space-padding-button;
+  border-radius: $radius-m;
+  height: $size-button-height;
+  cursor: pointer;
+
+  transition: color $transition-main, background-color $transition-main, border-color $transition-main,
+    fill $transition-main;
+
+  @include light-theme {
+    color: $color-foreground-inverted;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-primary-dark;
+  }
+}
+
+.icon {
+  color: $color-white;
+  transition: color $transition-main;
+}
+
+.inner {
+  @include element-flex(row, center, center);
+  width: 100%;
+  position: relative;
+}
+
+.loader {
+  height: 2rem;
+  position: absolute;
+  @include loading-spinner-animation;
+  color: $color-white;
+}
+
+.gray {
+  background-color: $color-gray-600;
+
+  @include dark-theme {
+    background-color: $color-gray-800;
+  }
+
+  &:hover,
+  &:active {
+    background-color: darken($color-gray-600, 5);
+
+    @include dark-theme {
+      background-color: darken($color-gray-800, 5);
+    }
+  }
+}
+
+.transparent {
+  background-color: transparent;
+
+  @include light-theme {
+    color: $color-foreground;
+  }
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  & .icon {
+    color: $color-foreground;
+  }
+}
+
+.empty {
+  background-color: transparent;
+  border: 1px solid $color-primary;
+
+  @include light-theme {
+    color: $color-foreground;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-primary;
+
+    @include light-theme {
+      color: $color-foreground-inverted;
+    }
+  }
+
+  & .icon {
+    color: $color-foreground;
+  }
+
+  &:hover .icon {
+    color: $color-foreground-inverted;
+  }
+}
+
+.empty.gray {
+  border: 1px solid $color-gray-600;
+
+  @include dark-theme {
+    background-color: unset;
+    border: 1px solid $color-gray-800;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-gray-600;
+
+    @include dark-theme {
+      background-color: $color-gray-800;
+    }
+  }
+}
+
+.white {
+  background-color: $color-background-1;
+
+  @include light-theme {
+    color: $color-foreground;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-background-1-dark;
+  }
+}
+
+.wrapper {
+  @include element-flex(row, center, center);
+  gap: 1.5rem;
+
+  &.withSmallIcon {
+    gap: $spacing-1;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.label {
+  font-family: $main-font;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.isLoading {
+  @include disabled-ui();
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: transparent;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.small {
+  height: unset;
+  padding: $spacing-1 $spacing-2;
+}

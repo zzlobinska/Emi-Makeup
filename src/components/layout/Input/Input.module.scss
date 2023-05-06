@@ -1,0 +1,82 @@
+@import 'src/styles';
+
+.input {
+  @include appearance(none);
+  font-family: $main-font;
+  width: 100%;
+  color: $color-foreground-dim;
+  font-size: $font-size-m;
+  padding: $space-padding-button;
+  border-radius: $radius-m;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: $color-primary;
+  height: $size-button-height;
+  background-color: $color-background-2;
+
+  transition: border-color $transition-main, box-shadow $transition-main;
+
+  &:hover {
+    cursor: text;
+  }
+
+  &:focus {
+    box-shadow: $shadow-input-active;
+    outline: none;
+  }
+
+  &:disabled {
+    color: lighten($color-gray-500, 50%);
+    cursor: not-allowed;
+  }
+
+  &.error {
+    border-color: $border-input-error;
+    box-shadow: $shadow-input-error;
+  }
+
+  &.error:focus {
+    outline-color: $border-input-error;
+    box-shadow: $shadow-input-error;
+  }
+}
+
+.readOnlyInput:disabled {
+  color: $color-foreground-dim;
+  background-color: $color-background-1;
+  cursor: not-allowed;
+}
+
+.inputWrapper {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    background-size: 100% auto;
+    transform: translateY(-50%);
+    cursor: default !important;
+  }
+}
+
+@include placeholder {
+  font-size: $font-size-m;
+  color: $color-gray-500;
+}
+
+.disabled {
+  @include disabled-ui();
+}
+
+.passwordWrapper {
+  position: relative;
+  max-height: 5.2rem;
+}
+
+.passwordInput {
+  padding-right: calc($size-icon + 1.7rem + 1rem);
+}

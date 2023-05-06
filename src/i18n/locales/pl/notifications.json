@@ -1,0 +1,10 @@
+{
+  "header": "Powiadomienie",
+  "error": {
+    "unknown": "Wystąpił nieoczekiwany błąd.",
+    "network": "Wystąpił błąd sieci.",
+    "notAllowedFileFormat": "Format pliku jest niedozwolony."
+  },
+  "success": {},
+  "common": {}
+}

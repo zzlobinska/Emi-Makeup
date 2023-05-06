@@ -1,0 +1,77 @@
+// Basic colors
+$color-foreground: var(--color-foreground);
+$color-foreground-dim: var(--color-foreground-dim);
+$color-foreground-inverted: var(--color-foreground-inverted);
+
+$color-background-1: var(--color-background-1);
+$color-background-1-dark: var(--color-background-1-dark);
+$color-background-1-light: var(--color-background-1-light);
+
+$color-background-2: var(--color-background-2);
+$color-background-2-dark: var(--color-background-2-dark);
+$color-background-2-light: var(--color-background-2-light);
+
+$color-background-3: var(--color-background-3);
+$color-background-3-dark: var(--color-background-3-dark);
+$color-background-3-light: var(--color-background-3-light);
+
+$color-primary: var(--color-primary);
+$color-primary-dark: var(--color-primary-dark);
+$color-primary-light: var(--color-primary-light);
+
+$color-secondary: var(--color-secondary);
+$color-secondary-dark: var(--color-secondary-dark);
+$color-secondary-light: var(--color-secondary-light);
+
+$color-success: var(--color-success);
+$color-success-dark: var(--color-success-dark);
+$color-success-light: var(--color-success-light);
+
+$color-danger: var(--color-danger);
+$color-danger-dark: var(--color-danger-dark);
+$color-danger-light: var(--color-danger-light);
+
+$color-warning: var(--color-warning);
+$color-warning-dark: var(--color-warning-dark);
+$color-warning-light: var(--color-warning-light);
+
+// Grayscale
+$color-white: #fff;
+$color-gray-100: #f5f5f5;
+$color-gray-200: #eeeeee;
+$color-gray-300: #e0e0e0;
+$color-gray-400: #bdbdbd;
+$color-gray-500: #9e9e9e;
+$color-gray-600: #757575;
+$color-gray-700: #616161;
+$color-gray-800: #424242;
+$color-gray-900: #212121;
+$color-black: #000;
+
+// Box shadows
+$shadow-main: rgba(0, 0, 0, 0.2) 0rem 0.4rem 2.2rem -0.5rem;
+$shadow-soft: rgba(0, 0, 0, 0.08) 0rem 0.2rem 1.2rem -0.3rem;
+$shadow-sharp: rgba(0, 0, 0, 0.24) 0rem 0.3rem 0.8rem;
+$shadow-outline: rgba(0, 0, 0, 0.05) 0rem 0rem 0rem 0.1rem;
+
+$shadow-input-active: 0 0 0 0.1rem $color-primary-dark;
+$shadow-input-error: 0 0 0 0.1rem $color-danger-dark;
+
+// Borders
+$border-input-active: 0.1rem solid $color-primary-dark;
+$border-input-error: 0.1rem solid $color-danger-dark;
+
+// Filters
+$filter-white: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(201deg) brightness(106%)
+  contrast(106%);
+$filter-black: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(226deg) brightness(103%)
+  contrast(108%);
+
+// References
+// mui palette -> https://mui.com/material-ui/customization/palette/
+// white palette -> https://www.color-name.com/best-white.color
+// mui scale -> https://mui.com/material-ui/customization/color/
+// box shadows -> https://getcssscan.com/css-box-shadow-examples
+
+$pink: #ff97d9;
+$dark-pink: #ff5ec4;

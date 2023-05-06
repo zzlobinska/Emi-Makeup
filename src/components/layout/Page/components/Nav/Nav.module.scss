@@ -1,0 +1,51 @@
+@import 'src/styles';
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  @include mobileWidth {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include mobileWidth {
+    order: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+
+  img {
+    max-width: 75%;
+  }
+}
+
+.link {
+  padding: 20px;
+  font-size: 20px;
+  transition: color 0.2s, font-weight 0.2s;
+  &:hover {
+    color: $dark-pink;
+    font-weight: bold;
+  }
+}
+
+.active {
+  color: $dark-pink;
+  font-weight: bold;
+}

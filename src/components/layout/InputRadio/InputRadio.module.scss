@@ -1,0 +1,59 @@
+@import 'src/styles';
+
+.container {
+  display: flex;
+  align-items: flex-start;
+
+  &:first-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.disabled {
+  @include disabled-ui();
+
+  .label,
+  .label:hover {
+    cursor: not-allowed;
+  }
+}
+
+.label {
+  margin-left: 1rem;
+  font-size: $font-size-m;
+  color: $color-foreground;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.checked:hover {
+    cursor: default;
+  }
+}
+
+.box {
+  border-radius: 50%;
+  min-width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid $color-primary-dark;
+  transition: $transition-duration-super-fast linear;
+  @include appearance(none);
+
+  &__error {
+    border-color: $border-input-error;
+    box-shadow: $shadow-input-error;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:checked {
+    border: 0.7rem solid $color-primary;
+  }
+
+  &:checked:hover {
+    cursor: default;
+  }
+}

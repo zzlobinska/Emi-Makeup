@@ -1,0 +1,49 @@
+@import 'src/styles';
+
+.container {
+  display: flex;
+  position: relative;
+  z-index: auto;
+}
+
+.input {
+  display: none;
+}
+
+.fileInfo {
+  @include element-flex(column, center, flex-start);
+  @include trimText;
+  padding: 0 2rem;
+}
+
+.fileName {
+  @include trimText;
+  max-width: 15ch;
+}
+
+.clearButton {
+  @include element-flex(column, center, center);
+  width: 2rem;
+  height: 2rem;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 50%;
+  background: transparent url(../../../assets/icons/x.svg) no-repeat;
+  position: absolute;
+  right: -0.2rem;
+  top: 0;
+  cursor: pointer;
+}
+
+.loaderWrapper {
+  @include element-flex(column, center, center);
+  height: 5rem;
+  width: 10rem;
+}
+
+.loadButton {
+  min-width: 10rem;
+  z-index: auto;
+  word-break: keep-all;
+  white-space: nowrap;
+}

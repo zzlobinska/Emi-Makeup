@@ -1,0 +1,38 @@
+@import 'src/styles';
+
+.container {
+  width: 100%;
+  min-height: $size-footer-height;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  @include mobileWidth {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.media {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  cursor: pointer;
+  @include mobileWidth {
+   order: 2;
+  }
+}
+
+.icon {
+  width: 30px;
+}
+
+.text {
+  justify-self: center;
+
+  @include mobileWidth {
+    margin: 20px 0;
+  }
+}
+

@@ -1,0 +1,8 @@
+@import 'src/styles';
+
+.container {
+  width: 100%;
+  @include element-flex(column);
+  padding: $spacing-7 calc(50% - 60rem);
+  background: $color-background-1;
+}

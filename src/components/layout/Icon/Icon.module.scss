@@ -1,0 +1,25 @@
+@import 'src/styles';
+
+.icon {
+  @include flex-center;
+  color: $color-foreground;
+  width: $size-icon;
+  height: $size-icon;
+}
+
+.small {
+  width: $size-icon-small;
+  height: $size-icon-small;
+}
+
+.gray {
+  color: $color-gray-500;
+}
+
+.colored {
+  color: $color-primary;
+}
+
+.noPointerEvents {
+  pointer-events: none;
+}
