@@ -9,6 +9,8 @@ const Footer = () => {
       <a
         className={style.media}
         href='https://www.instagram.com/emiliazlobinska/'
+        target='_blank'
+        rel='noreferrer'
       >
         <img
           className={style.icon}
@@ -21,6 +23,8 @@ const Footer = () => {
       <a
         className={style.media}
         href='https://www.facebook.com/emiliazlobinskamakeup'
+        target='_blank'
+        rel='noreferrer'
       >
         <img
           className={style.icon}
